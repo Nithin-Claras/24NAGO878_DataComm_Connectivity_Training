@@ -1,0 +1,5 @@
+This is my text file.
+[2024-05-10 10:30:12] ERROR : Disk full
+[2024-05-11 11:38:32] ERROR : Connection timed out
+[2024-05-12 12:30:12] ERROR : Invalid input
+
