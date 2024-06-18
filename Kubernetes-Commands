@@ -1,0 +1,11 @@
+To See the Namespaces :
+
+kubectl get ns  
+
+kubectl create namespace test-ns - To create 
+ kubectl get ns - To see the Namespace 
+
+
+
+###############################
+

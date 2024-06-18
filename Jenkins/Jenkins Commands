@@ -1,0 +1,27 @@
+    1  sudo apt update
+    2  sudo apt install fontconfig openjdk-17-jre
+    3  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian/jenkins.io-2023.key
+    4  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    5  sudo apt-get update
+    6  sudo apt-get install jenkins -y
+    7  cat /var/lib/jenkins/secrets/initialAdminPassword
+    8  curl https://raw.githubusercontent.com/Msocial123/docker-install-commands/master/docker-install.sh | sudo bash
+    9  sudo apt-get update
+   10  sudo apt-get install ca-certificates curl
+   11  sudo install -m 0755 -d /etc/apt/keyrings
+   12  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   13  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   14  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   15  sudo apt-get update
+   16  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   17  service docker status
+   18  sudo usermod -aG docker $USER
+   19  chmod 777 /var/run/docker.sock
+   20  cd /var/lib/jenkins/workspace
+   21  cd /var/lib/jenkins/workspace/Docker-Build-Project
+   22  ls
+   23  cat Dockerfile
+   24  docker images
+   25  histoey
+   26  history

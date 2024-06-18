@@ -1,0 +1,34 @@
+ 1 docker image
+   2 docker images
+   3 clear
+   4 docker ps
+   5 docker ps -a
+   6 docker run -td --name webserver -p 80:80 muralisocial123/devops-web:2.0
+   7 docker os
+   8 docker ps
+   9 docker exec -it --name webserver /bin/bash
+  10 docker exec -it webserver /bin/bash
+  11 docker rm -f webserver
+  12 docker ps
+  13 docker ps -a
+  14 clear
+  15 docker run -it --name A1 -v /Mohan ubuntu /bin/bash
+  16 docker ps
+  17 docker ps -a
+  18 docker rm A1
+  19 docker ps -a
+  20 docker run -it --name A2 -v /Mohan ubuntu /bin/bash
+  21 clear
+  22 docker run -it --name A3 -v mydata:/Data ubuntu /bin/bash
+  23 docker volume ls
+  24 docker start A3
+  25 docker inspect A3
+  26 clear
+  27 docker volumes ls
+  28 docker volume ls
+  29 docker ps -a
+  30 docker run -it --name B1 --privileged=true --volumes-from A3 ubuntu /bin/bash
+  31 docker inspect B1
+  32 docker start B1
+  33 docker inspect B1
+  34 docker run -it --name C1 -v C:\Workspace:/Wipro ubuntu /bin/bash

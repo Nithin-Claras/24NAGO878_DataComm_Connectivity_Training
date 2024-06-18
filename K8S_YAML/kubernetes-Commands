@@ -1,0 +1,526 @@
+ 1  kubectl get deployments
+    2  clear
+    3  kubectl get deployments
+    4  kubectl scale deployment node-app-deployment --replicas=3
+    5  kubectl get deployments
+    6  kubbectl get events
+    7  kubectl get events
+    8  kubectl get deployments
+    9  clear
+   10  kubectl get deployments
+   11  kubectl describe deploymnet node-app-deployment
+   12  kubectl describe deployment node-app-deployment
+   13  kubectl set image deployment node-app-deployment node-app=nginx
+   14  kubectl get pods -o wide
+   15  kubectl describe deployment node-app-deployment
+   16  kubectl rollout status deployment/node-app-deployment 
+   17  kubectl rollout history deployment/node-app-deployment
+   18  kubectl rollout undo deployment node-app-deployment
+   19  kubectl rollout status deployment/node-app-deployment 
+   20  kubectl describe deployment node-app-deployment
+   21  kubectl get rs
+   22  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+   23  kubectl get deployments
+   24  kubectl get nodes
+   25  clear
+   26  kubectl get svc
+   27  kubectl get deployment
+   28  ls
+   29  cat deployment.yaml
+   30  vi svc.yaml
+   31  kubectl apply -f svc.yaml
+   32  kubectl get svc
+   33  kubectl get svc -w
+   34  vi web-deployment.yaml
+   35  kubectl apply -f web-deployment.yaml
+   36  clear
+   37  kubectl get hpa
+   38  kubectl get deployments
+   39  cat deployment.yaml
+   40  vi hpa.yaml
+   41  kubectl apply -f hpa.yaml
+   42  kubectl get hpa
+   43  kubectl top
+   44  kubectl top pods
+   45  kubectl top nodes
+   46  kubectl get deployment metrics-server -n kube-system
+   47  kubectl get deployment metrics-server 
+   48  clear
+   49  yum install httpd-tools -y
+   50  apt-get update -y
+   51  sudo apt-get update -y
+   52  sudo apt-get install apache2-utils -y
+   53  ab -k -c 350 -n 20000 http://34.29.153.101:3000/
+   54  ab -k -c 350 -n 20000 http://34.29.153.101:3000
+   55  ab -k -c 350 -n 20000 http://34.29.153.101:3000/
+   56  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+   57  kubectl get deployments
+   58  kubectl get svc
+   59  kubectl delete svc node-deployment-svc
+   60  clear
+   61  kubectl get deployments
+   62  ls
+   63  cat svc.yaml
+   64  rm -rf svc.yaml
+   65  clear
+   66  vi svc.yaml
+   67  kubectl apply -f svc.yaml
+   68  kubectl get svc
+   69  kubectl get svc -w
+   70  kubectl get deplpoyments
+   71  kubectl get deployments
+   72  kubectl scale deployment web-app-deployment
+   73  kubectl scale deployment web-app-deployment --replicas=3
+   74  kubectl get deployments
+   75  ls
+   76  cat web-deployment.yaml
+   77  vi web-svc.yaml
+   78  kubectl apply -f web-svc.yaml
+   79  kubectl get svc
+   80  kubectl get pods -o wide
+   81  clear
+   82  vi one-deployment.yaml
+   83  kubectl apply -f one-deployment.yaml
+   84  kubectl get deployment
+   85  kubectl get svc
+   86  vi two-deployment.yaml
+   87  kubectl apply -f two-deployment.yaml
+   88  kubectl get deployments
+   89  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+   90  clear
+   91  kubectl get svc
+   92  vi ingress.yaml
+   93  kubectl apply -f ingress.yaml
+   94  kubectl get ingress
+   95  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+   96  gcloud container clusters create test-cluster --enable-autoscaling     --num-nodes 2     --region        us-central1-c     --total-min-nodes 2  --total-max-nodes 10
+   97  gcloud container clusters create prod-cluster --enable-autoscaling     --num-nodes 2     --region        us-central1-c     --total-min-nodes 2  --total-max-nodes 10
+   98  gcloud container clusters create prod-cluster --enable-autoscaling     --num-nodes 1    --region         us-central1-c     --total-min-nodes 1  --total-max-nodes 10
+   99  kubectl get nodes
+  100  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  101  kubectl get deployments
+  102  kubectl get hpa
+  103  kubectl get nodes
+  104  clear
+  105  ls
+  106  kubectl top pods
+  107  kubectl top nodes
+  108  kubectl get deployments
+  109  clear
+  110  vi web-AutoScaling.yaml
+  111  kubectl apply -f web-AutoScaling.yaml
+  112  kubectl get hpa
+  113  kubectl top pods
+  114  gcloud container clusters create my-cluster --enable-autoscaling     --num-nodes=1     --min-nodes=1 --max-nodes=10     --region=us-central1-c
+  115  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  116  kubectl get nodes 
+  117  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  118  kubectl get nodes
+  119  git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
+  120  ls
+  121  cd microservices-demo
+  122  ls
+  123  kubectl apply -f ./release/kubernetes-manifests.yaml
+  124  kubectl get nodes
+  125  kubectl get pods
+  126  kubectl get nodes
+  127  kubectl top pods -o wide
+  128  kubectl top pods
+  129  kubectl get svc
+  130  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  131  ls
+  132  rm -rf *
+  133  clear
+  134  ls
+  135  vi empty-dir.yaml
+  136  kubectl apply -f empty-dir.yaml
+  137  kubectl get pods
+  138  kubectl exec -it empty-dir-pod -- /bin/sh
+  139  vi sample-empty.yaml
+  140  kubectl apply -f sample-empty.yaml
+  141  vi sample-empty.yaml
+  142  kubectl apply -f sample-empty.yaml
+  143  kubectl get pods
+  144  kubectl exec -it empty-dir -- /bin/sh
+  145  kubectl exec -c empty-pod-1 -it empty-dir -- /bin/bash
+  146  kubectl exec -c empty-pod-1 -it empty-dir -- /bin/sh
+  147  kubectl get pods
+  148  kubectl delete pod empty-dir 
+  149  clear
+  150  vi host.yaml
+  151  kubectl apply -f host.yaml
+  152  kubectl get pods
+  153  kubectl get pods -o wide
+  154  kubectl get pods
+  155  kubectl delete pod volume-pod
+  156  clear
+  157  kubectl get pods
+  158  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  159  ls
+  160  vi pv.yaml
+  161  kubectl apply -f pv.yaml
+  162  vi example-pvc.yaml
+  163  kubectl apply -f example-pvc.yaml
+  164  vi gce-pod.yaml
+  165  kubectl apply -f gce-pod.yaml
+  166  vi gce-pod.yaml
+  167  kubectl apply -f gce-pod.yaml
+  168  kubectl get pv
+  169  kubectl get pvc
+  170  kubectl get pods
+  171  kubectl describe examle-gce-pod
+  172  kubectl describe pod examle-gce-pod
+  173  kubectl describe pod example-gce-pod
+  174  kubectl get pvc
+  175  kubectl get pv
+  176  ls
+  177  vi example-pvc.yaml
+  178  kubectl apply -f example-pvc.yaml
+  179  vi example-pvc.yaml
+  180  kubectl apply -f example-pvc.yaml
+  181  help
+  182  clear
+  183  kubectl get ns
+  184  kubectl get all
+  185  kubectl get svc
+  186  kubectl get deployment
+  187  kubectl create namespace test-ns
+  188  kubectl get ns
+  189  kubectl run nginx-pod --image nginx --port 80
+  190  kubectl get pods
+  191  kubectl get pods -o wide
+  192  kubectl describe pod nginx-pod
+  193  kubectl namespace ns
+  194  kubectl get ns 
+  195  kubectl run web-app --image muralisocial123/web-app-test:latest --port 80 -n test-ns
+  196  kubectl get pods 
+  197  kubectl get pods -n test-ns
+  198  kubctl explain pod
+  199  kubectl explain pod
+  200  vi ns.yaml
+  201  kubectl apply -f ns.yaml 
+  202  vi ns.yaml
+  203  kubectl apply -f ns.yaml 
+  204  vi ns.yaml
+  205  kubectl apply -f ns.yaml 
+  206  vi ns-pod.yaml
+  207  kubectl apply -f ns-pod.yaml 
+  208  kubectl get pod -n prod-test
+  209  kubectl get ns 
+  210  kubectl get pod -n prod-ns
+  211  kubectl top pod web-app -n prod-ns
+  212  vi res-pod.yaml
+  213  kubectl apply -f res-pod.yaml
+  214  vi res-pod.yaml
+  215  kubectl apply -f res-pod.yaml
+  216  vi res-pod.yaml
+  217  kubectl apply -f res-pod.yaml
+  218  kubectl get pod -n test-ns
+  219  kubectl get pods -w -n test-ns
+  220  kubectl get pods
+  221  clear
+  222  kubectl get pods
+  223  kubectl delete pod nginx-pod
+  224  kubectl get pods
+  225  help
+  226  kubctl get ns
+  227  kubectl get ns 
+  228  kubectl delete -n test-ns
+  229  kubectl delete namespace test-ns
+  230  kubectl delete namespace prod-ns
+  231  gcloud container clusters get-credentials test-cluster --zone us-east1-c --project kubertnets-learning-pracrise
+  232  kubectl get pv
+  233  ls
+  234  rm -rf *
+  235  clear
+  236  vi storage.yaml
+  237  kubectl apply -f storage.yaml
+  238  vi pvc.yaml
+  239  kubectl apply -f pvc.yaml
+  240  kubectl get pvc
+  241  vi deployment.yaml
+  242  kubectl apply -f deployment.yaml
+  243  vi svc.yaml
+  244  kubectl apply -f svc.yaml
+  245  vi svc.yaml
+  246  kubectl apply -f svc.yaml
+  247  kubectl get pods
+  248  kubectl exec -it my-deployment-5bf945fc9f-w8t2w -- /bin/sh
+  249  kubectl get svc
+  250  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project kubertnets-learning-pracrise
+  251  kubectl get ns
+  252  kubectl get all
+  253  clear
+  254  kubectl create ns test-ns
+  255  kubectl get ns
+  256  kubectl get pods
+  257  kubectl get deployments
+  258  kubectl delete deployment nginx-1
+  259  kubectl get pods
+  260  clear
+  261  kubectl get deployments
+  262  kubectl run node-deployment --image muralisocial123/transcation-app:latest --port 3000
+  263  kubectl get pods
+  264  kubectl describe pod node-deployment
+  265  kubectl get pods
+  266  kubectl describe pod node-deployment
+  267  kubectl get pods -o wide
+  268  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project kubertnets-learning-pracrise
+  269  echo -n 'Mur@li2024' | base64
+  270  echo -n 'TXVyQGxpMjAyNA==' | base64 --decode
+  271  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project kubertnets-learning-pracrise
+  272  ls
+  273  claer
+  274  clear
+  275  kubectl explain pod
+  276  clear
+  277  rm -rf *
+  278  ls
+  279  vi pod.yaml
+  280  kubectl apply -f pod.yaml
+  281  kubectl get pods
+  282  kubectl describe pod web-app
+  283  kubectl get pods
+  284  kubectl exec -it web-app -- /bin/sh
+  285  kubectl get pods 
+  286  kubectl delete pod web-app
+  287  kubectl explain replicaset
+  288  clear
+  289  vi rs.yaml
+  290  kubectl apply -f rs.yaml
+  291  kubectl get rs
+  292  kubectl get pods
+  293  kubectl delete pod node-app-rs-5nqpx
+  294  kubectl get pods
+  295  kubectl get events --sort-by=.metadata.creationTimestamp
+  296  clear
+  297  vi deployment.yaml
+  298  kubectl apply -f deployment.yaml
+  299  kubectl get pods
+  300  kubectl get rs
+  301  kubectl scale deployment web-app-deployment --replicas 3
+  302  kubectl get pods
+  303  kubectl get pods -o wide
+  304  vi service.yaml
+  305  kubectal apply -f service.yaml
+  306  kubectl apply -f service.yaml
+  307  kubectl get svc
+  308  kubectl get svc -w
+  309  kubectl get svc
+  310  kubectl describe svc web-app-service
+  311  kubectl get pods -o wide
+  312  kubectl get svc
+  313  kubectl delet svc nginx-1-service
+  314  kubectl delete svc nginx-1-service
+  315  kubectl delete svc web-app-service
+  316  kubectl get deployments
+  317  kubectl delete deployment web-app-deployment
+  318  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  319  kubectl get deployments
+  320  kubectl get pods
+  321  clear
+  322  vi configmap.yaml
+  323  kubectl get configmap
+  324  kubectl apply -f configmap.yaml
+  325  kubectl get configmap
+  326  kubectl describe configmap mysql-config
+  327  vi secret.yaml
+  328  kubectl apply -f secret.yaml
+  329  kubectl get secrets
+  330  vi sc.yaml
+  331  kubectl apply -f sc.yaml
+  332  kubectl get sc
+  333  clear
+  334  kubectl get sts
+  335  vi sts.yaml
+  336  kubectl apply -f sts.yaml
+  337  kubectl get sts
+  338  kubectl get pods -o wide
+  339  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  340  kubectl get sts
+  341  kubectl get pods -o wide
+  342  kubectl delete pod mysql-sts-0
+  343  kubectl get pods
+  344  kubectl create deployment nginx-deployment --image nginx --port 80 --replicas 3
+  345  kubectl get deployments
+  346  kubctl get pods
+  347  kubectl get pods
+  348  kubectl delete pod nginx-deployment-7fffdb88fd-kts72
+  349  kubectl get pods
+  350  kubectl describe pod nginx-deployment-7fffdb88fd-kts72
+  351  kubectl describe pod mysql-sts-0
+  352  vi daemonset.yaml
+  353  kubectl apply -f daemonset.yaml
+  354  kubectl get daemonsets
+  355  kubectl get nodes
+  356  kubectl get pods
+  357  kubectl get pods -o wide
+  358  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  359  kubectl get deployments
+  360  kubectl creatde deployment app-deploy --image nginx --port 80
+  361  kubectl create deployment app-deploy --image nginx --port 80
+  362  kubectl get pods
+  363  kubectl get pods -o wide
+  364  kubectl describe pod app-deploy-6ddbf79bb9-9dftk
+  365  kubectl get nodes
+  366  kubectl get nodes --show-labels
+  367  kubectl get pods --show-labels
+  368  clear
+  369  kubectl get nodes
+  370  kubectl label nodes gke-test-cluster-default-pool-0a1f62e8-a28a app=node-app
+  371  kubectl get nodes --show-labels
+  372  kubectl label nodes gke-test-cluster-default-pool-0a1f62e8-ez69 app=web-app
+  373  ls
+  374  rm -rf *
+  375  vi pod.yaml
+  376  kubectl apply -f pod.yaml
+  377  kubectl get pods
+  378  kubectl get pods -o wide
+  379  kubectl get nodes --show-labels
+  380  vi example-node.yaml
+  381  kubectal apply -f example-node.yaml
+  382  kubectl apply -f example-node.yaml
+  383  kubectl get deployments
+  384  kubectl get deployments -o wide
+  385  kubectl get pods
+  386  kubectl get pods -o wide
+  387  kubectl get nodes --show-labels
+  388  kubectl get deployments
+  389  kubectl scale deployment node-deployment --replicas 5
+  390  kubectl get pods -o wide
+  391  kubectl get deployments
+  392  kubectl scale deployment nginx-deployment --replicas 5
+  393  kubectl get pods -o wide
+  394  kubectl get nodes --show-labels
+  395  clear
+  396  vi node-selector.yaml
+  397  kubectl apply -f node-selector.yaml
+  398  kubectl get deployments
+  399  kubectl get pods -o wide
+  400  kubectl get nodes --show-labels
+  401  kubectl label nodes gke-test-cluster-default-pool-0a1f62e8-ez69 app=web-app
+  402  kubectl get nodes --show-labels
+  403  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  404  kubectl get nodes --show-lables
+  405  kubectl get nodes --show-lable
+  406  kubectl get nodes
+  407  kubectl get nodes --show-labels
+  408  kubectl label node gke-test-cluster-default-pool-0a1f62e8-ez69  app-
+  409  kubectl get nodes --show-labels
+  410  ls
+  411  rm -rf *
+  412  clear
+  413  vi preferred.yaml
+  414  kubectl apply -f preferred.yaml
+  415  vi preferred.yaml
+  416  kubectl apply -f preferred.yaml
+  417  kubectl get nodes
+  418  kubectl get pods -o wide
+  419  kubectl get deployments
+  420  kubectl delete deployment app-deploy
+  421  kubectl delete deployment nginx-app-deployment
+  422  kubectl delete deployment nginx-deployment
+  423  kubectl delete deployment node-deployment
+  424  kubectl get deploymnets
+  425  kubectl get deployments
+  426  kubectl get pods -o wide
+  427  kubectl get sts
+  428  kubectl delete sts mysql-sts
+  429  kubectl get pods
+  430  kubectl delete pod nginx-app
+  431  kubectl delete pod simple-search-b85fd
+  432  kubectl get pods -o wide
+  433  kubectl get nodes
+  434  vi required.yaml
+  435  kubectl apply -f required.yaml
+  436  kubectl get pods -o wide
+  437  kubectl get pods
+  438  clear
+  439  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  440  vi pod-affinity.yaml
+  441  kubectl apply -f pod-affinity.yaml
+  442  kubectl delete -f pod-affinity.yaml
+  443  ls
+  444  rm -rf pod-affinity.yaml
+  445  clear
+  446  ls
+  447  vi pod-affinity.yaml
+  448  kubectl apply -f pod-affinity.yaml
+  449  kubectl delete -f pod-affinity.yaml
+  450  rm -rf pod-affinity.yaml
+  451  ls
+  452  vi pod-affinity.yaml
+  453  kubectl apply -f pod-affinity.yaml
+  454  kubectl get pods
+  455  kubectl get pods -o wide
+  456  clear
+  457  vi pod-antiaffinity.yaml
+  458  kubectl apply -f pod-antiaffinity.yaml
+  459  kubectl get deployments
+  460  kubectl delete deployments nginx-app-required
+  461  kubectl delete deployments nginx-deployment-preffered
+  462  kubectl get deployments
+  463  kubectl get pods -o wide
+  464  kubectl describe pod cart-example
+  465  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  466  vi deployment.yaml
+  467  ls
+  468  kubectl apply -f deployment.yaml
+  469  kubectl get deployments
+  470  kubectl scale deployment web-app-deployment --replicas 3
+  471  kubectl get deployments
+  472  kubectl get pods 
+  473  kubectl describe deployment web-app-deployment 
+  474  kubectl get svc
+  475  ls
+  476  vi deployment.yaml
+  477  kubectl apply -f deployment.yaml
+  478  vi deployment.yaml
+  479  kubectl apply -f deployment.yaml
+  480  kubectl get svc
+  481  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  482  kubectl get deployments
+  483  kubectl get pods -o wide
+  484  kubectl get nodes
+  485  ls
+  486  vi service.yaml
+  487  kubectl apply -f service.yaml
+  488  vi service.yaml
+  489  kubectl apply -f service.yaml
+  490  kubectl get svc
+  491  kubectl get svc -w
+  492  kubectl get pods
+  493  kubectl exec -it web-app-deployment-75b4c5c68c-bpm6n -- /bin/sh
+  494  kubectl get pods -o wide
+  495  kubectl exec -it web-app-deployment-75b4c5c68c-bpm6n -- /bin/sh
+  496  kubectl exec -it web-app-deployment-75b4c5c68c-bpm6n -- /bin/bash
+  497  clear
+  498  vi dep1.yaml
+  499  vi dep2.yaml
+  500  kubectl apply -f dep1.yaml
+  501  gcloud container clusters get-credentials test-cluster --zone us-central1-c --project lithe-hallway-417319
+  502  kubectl get deploymets
+  503  kubectl get deployments
+  504  kubectl get svc 
+  505  kubectl delete svc web-app-loadbalancer
+  506  kubectl delete svc web-app-node-port
+  507  kubectl delete svc web-app-nodesvc
+  508  kubectl delete svc web-app-node-svc
+  509  kubectl get svc
+  510  kubectl delete svc web-app-svc
+  511  kubectl get svc
+  512  ld
+  513  ls
+  514  kubectl apply -f dep2.yaml
+  515  kubectl get svc
+  516  kubectl get deployments
+  517  kubectl apply - -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+  518  kubectl apply  -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+  519  kubectl get ns
+  520  kubectl get ingress
+  521  kubectl get svc
+  522  clear
+  523  vi nginx-ingree.yaml
+  524  kubectl apply -f nginx-ingree.yaml
+  525  kubectl get ingress
+  526  kubectl get ingress -w

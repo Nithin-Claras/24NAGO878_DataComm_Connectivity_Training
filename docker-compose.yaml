@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  transaction:
+    image: muralisocial123/citi-transaction-june:latest
+    ports:
+      - '3000:3000'
+      
+  web-app:
+    image: muralisocial123/devops-web:2.0
+    ports:
+      - '80:80'
+  
+    

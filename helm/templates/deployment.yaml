@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata:
+  name: transcation-example 
+  namespace: test-ns
+  lables:
+    name: node-deployment 
+    tier: app
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      name: node-deployment 
+      tier: app 
+  template:
+    metadata: 
+      labels:
+        name: node-deployment 
+        tier: app 
+    spec:
+      containers:
+        - name: node-app 
+          image: muralisocial123/node-app-example:latest
+          ports:
+            - containerPort: 3000    
+
+

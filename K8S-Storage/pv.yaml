@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: PersistentVolume
+metadata:
+  name: example-gce
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  gcePersistentDisk:
+    pdName: test-disk
+    fsType: ext4
+  

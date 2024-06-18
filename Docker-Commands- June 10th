@@ -1,0 +1,81 @@
+1  docker ps -a
+    2  docker start a3083ceaa42d
+    3  docker ps -a
+    4  docker create -it --name webserver ubuntu /bin/bash
+    5  docker ps
+    6  docker ps -a
+    7  docker start webserver
+    8  docker ps -a
+    9  docker ps
+   10  docker inspect webserver
+   11  docker images
+   12  clear
+   13  docker ps
+   14  docker attach webserver
+   15  docker ps
+   16  docker ps -a
+   17  docker start webserver
+   18  docker attach webserver
+   19  docker ps
+   20  docker run -it --name Web-app amazonlinux /bin/bash
+   21  docker ps -a
+   22  docker ps
+   23  docker stop web-app
+   24  docker stop Web-app
+   25  docker ps -a
+
+
+
+####################################################################################
+
+Deploying a Web Application Inside the Container 
+
+docker run -td --name web-app -p 81:80 ubuntu /bin/bash
+
+ 1  apt-get update
+    2  apt-get install apache2 -y
+    3  which apache2
+    4  cd /var/www/html
+    5  ls
+    6  service apache start
+    7  service apache2 start
+    8  cd /home/ubuntu
+    9  git clone https://github.com/Msocial123/Test-Web-App.git
+   10  apt-get install git -y
+   11  git clone https://github.com/Msocial123/Test-Web-App.git
+   12  ls
+   13  cd Test-Web-App
+   14  ls
+   15  cp index.html /var/www/html
+   16  cp contact.html /var/www/html
+   17  cp cloud-services.html /var/www/html
+##############################################################################
+
+  9  docker run -td --name web-app -p 81:80 ubuntu /bin/bash
+   10  docker exec -it web-app /bin/bash
+   11  docker ps -a
+   12  docker rm a3083ceaa42d
+   13  docker ps -a
+   14  docker rm -f 19c9770739cc
+   15  docker rm
+   16  docker ps -a
+   17  docker stop $(docker ps -a -q)
+   18  docker rm $(docker ps -a -q)
+   19  docker ps -a
+   20  docker images
+   21  docker rmi $(docker image -q)
+   22  docker rmi -f $(docker image -q)
+   23  clear
+   24  docker rmi -f $(docker images -q)
+   25  docker images
+   26  clear
+   27  docker --help
+   28  docker top
+   29  clear
+   30  docker run -td --name webserver -p 80:80 nginx /bin/bash
+   31  docker ps
+   32  docker ps
+   33  docker exec -it webserver /bin/bash
+
+
+

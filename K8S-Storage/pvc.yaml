@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: PersistentVolumeClaim
+metadata:
+  name: example-gce-pvc
+spec:
+  resources:
+    requests:
+      storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  volumeName: example-gce
